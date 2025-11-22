@@ -1,0 +1,108 @@
+# Example Configuration File for Multilingual Language Classification Experiments
+# Copy this file to config.yaml and modify as needed
+
+# Data Configuration
+data:
+  # Path to the multilingual XNLI dataset
+  data_path: "./data/multilingual_xnli_5lang.pkl"
+
+  # Languages to analyze (must match dataset)
+  languages:
+    - en  # English
+    - es  # Spanish
+    - zh  # Chinese
+    - fr  # French
+    - de  # German
+
+  # Maximum sequence length
+  max_length: 256
+
+# Model Configuration
+models:
+  # List of models to analyze
+  model_list:
+    - "meta-llama/Llama-3.1-8B-Instruct"
+    - "Qwen/Qwen2.5-7B-Instruct"
+    - "Qwen/Qwen2.5-Math-7B-Instruct"
+    - "nvidia/OpenMath2-Llama3.1-8B"
+    - "open-r1/OpenR1-Qwen-7B"
+    - "openai/gpt-oss-20b"
+
+# Training Configuration
+training:
+  # Batch sizes
+  extract_batch_size: 8      # Feature extraction batch size
+  train_batch_size: 128      # Probe training batch size
+
+  # Optimizer settings
+  learning_rate: 0.001       # 1e-3
+  weight_decay: 0.01
+
+  # Training epochs
+  epochs: 3
+
+  # Random seeds for multiple runs
+  seeds:
+    - 42
+    - 123
+    - 456
+    - 789
+    - 2024
+
+# GPU Configuration
+gpu:
+  # CUDA device IDs (comma-separated for multiple GPUs)
+  cuda_visible_devices: "0"
+
+  # Device selection
+  device: "cuda"  # or "cpu" for CPU-only mode
+
+# Output Configuration
+output:
+  # Base output directory
+  output_dir: "./results"
+
+  # Subdirectories
+  checkpoint_dir: "./results/checkpoints"
+  figures_dir: "./results/figures"
+
+  # Output file names
+  probe_accuracies: "probe_accuracies.csv"
+  token_alignment: "token_language_alignment.csv"
+  probe_geometry: "probe_geometry_stats.csv"
+  manifold_dimensions: "manifold_dimension_estimates.csv"
+
+# Analysis Configuration
+analysis:
+  # Token-Language Alignment
+  top_n_tokens: null  # null = analyze ALL tokens (slower but complete)
+
+  # Probe Geometry
+  compute_geometry: true
+  compute_manifold: true
+
+  # Generation Validation
+  generation_validation: true
+  generation_samples: 10  # Number of prompts per language
+
+  # Visualization
+  create_visualizations: true
+
+# Experiment Modes
+experiment:
+  # Run all layers (true) or specific layers (false)
+  all_layers: true
+
+  # Specific layers to analyze (if all_layers is false)
+  specific_layers:
+    - 0
+    - 5
+    - 10
+    - 15
+    - 20
+
+  # Save intermediate results
+  save_intermediate: true
+
+  # Resume from checkpoint if available
+  resume_if_available: true
