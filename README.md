@@ -1,15 +1,17 @@
 # How Language Directions Align with Token Geometry in Multilingual LLMs
 
-[![WWW 2026](https://img.shields.io/badge/WWW-2026-blue)](https://www2026.thewebconf.org/)
+[![Under Review](https://img.shields.io/badge/Status-Under%20Review-orange)](https://www2026.thewebconf.org/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Official code repository for the paper:
+Code repository for the paper:
 
 **"How Language Directions Align with Token Geometry in Multilingual LLMs"**
 *JaeSeong Kim and Suan Lee*
-The Web Conference (WWW) 2026, Dubai, UAE
+*Submitted to The Web Conference (WWW) 2026*
+
+> **Note**: This paper is currently under review. The code and experimental results are provided for research purposes.
 
 ---
 
@@ -224,18 +226,21 @@ This quantifies how pretraining data structure is "imprinted" into representatio
 
 ## 📝 Citation
 
+> **Note**: This paper is currently under review. Citation information will be updated upon acceptance.
+
 If you use this code or findings in your research, please cite:
 
 ```bibtex
-@inproceedings{kim2026language,
+@article{kim2024language,
   title={How Language Directions Align with Token Geometry in Multilingual LLMs},
   author={Kim, JaeSeong and Lee, Suan},
-  booktitle={Proceedings of the ACM Web Conference 2026},
-  year={2026},
-  location={Dubai, United Arab Emirates},
-  publisher={ACM}
+  journal={arXiv preprint (under review)},
+  year={2024},
+  note={Submitted to The Web Conference (WWW) 2026}
 }
 ```
+
+For the latest version and updates, please check this repository.
 
 ---
 
@@ -305,10 +310,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **Paper**: [WWW 2026 Proceedings](https://www2026.thewebconf.org/) (to be published)
+- **Conference**: [The Web Conference (WWW) 2026](https://www2026.thewebconf.org/)
 - **Models**: [Hugging Face Hub](https://huggingface.co/)
 - **Dataset**: [XNLI](https://github.com/facebookresearch/XNLI)
 
 ---
 
-**Note**: This repository contains the official implementation for reproducing all experiments and figures in our WWW 2026 paper. For questions about the methodology or results, please refer to the paper or contact the authors.
+**Note**: This repository contains the implementation for reproducing all experiments described in our paper submission. For questions about the methodology or results, please contact the authors.
