@@ -33,7 +33,7 @@ Multilingual LLMs demonstrate strong performance across diverse languages, yet t
 
 ### Installation
 
-```bash
+```python
 # Clone the repository
 git clone https://github.com/thisiskorea/How-Language-Directions-Align-with-Token-Geometry-in-Multilingual-LLMs.git
 cd How-Language-Directions-Align-with-Token-Geometry-in-Multilingual-LLMs
